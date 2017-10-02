@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Editory</title>
+<link rel="stylesheet" type="text/css" href="../static/css/style.css"
+	th:href="@{/css/style.css}"></link>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<script type="application/x-javascript">
+	
+	
+	
+	
+	
+ addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
+
+
+
+
+
+</script>
+<!-- bootstrap-css -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css"
+	media="all"></link>
+<!--// bootstrap-css -->
+<!-- css -->
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all"></link>
+<!--// css -->
+<!-- font-awesome icons -->
+<link href="css/font-awesome.css" rel="stylesheet"></link>
+<!-- //font-awesome icons -->
+<!-- font -->
+<link
+	href="//fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i"
+	rel="stylesheet"></link>
+<link
+	href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+	rel="stylesheet"></link>
+<link
+	href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700italic,700,400italic,300italic,300'
+	rel='stylesheet' type='text/css'></link>
+<!-- //font -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event) {
+			event.preventDefault();
+			$('html,body').animate({
+				scrollTop : $(this.hash).offset().top
+			}, 1000);
+		});
+	});
+	// When the user clicks on div, open the popup
+	function popUpRecuerdo() {
+		var popup = document.getElementById("myPopup");
+		popup.classList.toggle("show");
+	}
+</script>
+
+
+<!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
+</head>
+
+
+
+
+<body>
+   <div class="jarallax newsletter">
+		<a href="./index.html">
+		<img class = "logoInicio" src="images/logoinsta.png" alt="Inicio"></img>
+		</a>
+		<br></br>
+		<br></br>
+
+		<div class="container">
+			<div class="w3l-heading newsletter-heading">
+				<h3>Comentarios</h3>
+			</div>
+		</div>
+		<br></br>
+		<div class="contact-form-top">
+			<h3>¿Qué tenías pensado para tu vídeo?</h3>
+		</div>
+		<div class="agileinfo-contact-form-grid desktop">
+		<div class = "blanco">
+			<form action="/confirmarRegalo" method="post">
+				<h3>¿Cuántos vídeos formarán el vídeo regalo?</h3>
+				<p><input type="radio" name="videos" value="0" checked="true" ></input><span class="inputText"> 0-10 videos</span></p>
+  				<p><input type="radio" name="videos" value="10" checked="false"></input><span class="inputText"> 10-20 videos</span></p>
+  				<p><input type="radio" name="videos" value="30" checked="false"></input><span class="inputText"> 20-35 videos</span></p>
+  				<p><input type="radio" name="videos" value="50" checked="false"></input><span class="inputText"> Más de 35 videos</span></p>
+  				
+  				<p><h3>¿Cuál es la duración media aproximada de cada video?</h3>
+				<p><input type="radio" name="duracion" value="0" checked="true" ></input><span class="inputText"> 0-5 segundos</span></p>
+  				<p><input type="radio" name="duracion" value="10" checked="false"></input><span class="inputText"> 5-10 segundos</span></p>
+  				<p><input type="radio" name="duracion" value="30" checked="false"></input><span class="inputText"> 10-20 segundos</span></p>
+  				<p><input type="radio" name="duracion" value="50" checked="false"></input><span class="inputText"> Más de 20 segundos</span></p>
+  				
+  				<h3>¿Cuántas fotos quieres incluir?</h3>
+				<p><input type="radio" name="fotos" value="0" checked="true" ></input><span class="inputText"> 0 fotos</span></p>
+  				<p><input type="radio" name="fotos" value="10" checked="false"></input><span class="inputText"> 1-10 fotos</span></p>
+  				<p><input type="radio" name="fotos" value="30" checked="false"></input><span class="inputText"> 10-20 fotos</span></p>
+  				<p><input type="radio" name="fotos" value="50" checked="false"></input><span class="inputText"> Más de 20 fotos</span></p>
+  				
+  				
+				<button class="btn1">Continuar</button>
+			</form>
+		</div>
+		</div>
+
+		<div class="agileinfo-contact-form-grid mobile" style="margin: 0;padding: 5%;">
+		<div class = "blanco">
+			<form action="/confirmarRegalo" method="post">
+				<h3>¿Cuántos vídeos formarán el vídeo regalo?</h3>
+				<p><input type="radio" name="videos" value="0" checked="true" ></input><span class="inputText"> 0-10 videos</span></p>
+  				<p><input type="radio" name="videos" value="10" checked="false"></input><span class="inputText"> 10-20 videos</span></p>
+  				<p><input type="radio" name="videos" value="30" checked="false"></input><span class="inputText"> 20-35 videos</span></p>
+  				<p><input type="radio" name="videos" value="50" checked="false"></input><span class="inputText"> Más de 35 videos</span></p>
+  				
+  				<p><h3>¿Cuál es la duración media aproximada de cada video?</h3>
+				<p><input type="radio" name="duracion" value="0" checked="true" ></input><span class="inputText"> 0-5 segundos</span></p>
+  				<p><input type="radio" name="duracion" value="10" checked="false"></input><span class="inputText"> 5-10 segundos</span></p>
+  				<p><input type="radio" name="duracion" value="30" checked="false"></input><span class="inputText"> 10-20 segundos</span></p>
+  				<p><input type="radio" name="duracion" value="50" checked="false"></input><span class="inputText"> Más de 20 segundos</span></p>
+  				
+  				<h3>¿Cuántas fotos quieres incluir?</h3>
+				<p><input type="radio" name="fotos" value="0" checked="true" ></input><span class="inputText"> 0 fotos</span></p>
+  				<p><input type="radio" name="fotos" value="10" checked="false"></input><span class="inputText"> 1-10 fotos</span></p>
+  				<p><input type="radio" name="fotos" value="30" checked="false"></input><span class="inputText"> 10-20 fotos</span></p>
+  				<p><input type="radio" name="fotos" value="50" checked="false"></input><span class="inputText"> Más de 20 fotos</span></p>
+  				
+  				
+				<button class="btn1">Continuar</button>
+			</form>
+		</div>
+		</div>
+
+	</div>
+		<!-- copyright -->
+	<div class="agileits-w3layouts-copyright">
+		<div class="container centrado">
+		<p>© 2017 Editory Web. All rights reserved</p>
+	</div>
+	</div>
+	<!-- //copyright -->
+
+	
+</body>
+</html>

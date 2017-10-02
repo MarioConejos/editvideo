@@ -1,0 +1,243 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Editory</title>
+<link rel="stylesheet" type="text/css" href="../static/css/style.css"
+	th:href="@{/css/style.css}"></link>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<script type="application/x-javascript">
+	
+	
+	
+	
+	
+	
+ addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
+
+
+
+
+
+
+</script>
+<!-- bootstrap-css -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css"
+	media="all"></link>
+<!--// bootstrap-css -->
+<!-- css -->
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all"></link>
+<!--// css -->
+<!-- font-awesome icons -->
+<link href="css/font-awesome.css" rel="stylesheet"></link>
+<!-- //font-awesome icons -->
+<!-- font -->
+<link
+	href="//fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i"
+	rel="stylesheet"></link>
+<link
+	href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+	rel="stylesheet"></link>
+<link
+	href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700italic,700,400italic,300italic,300'
+	rel='stylesheet' type='text/css'></link>
+<!-- //font -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event) {
+			event.preventDefault();
+			$('html,body').animate({
+				scrollTop : $(this.hash).offset().top
+			}, 1000);
+		});
+	});
+	// When the user clicks on div, open the popup
+	function popUpRecuerdo() {
+		var popup = document.getElementById("myPopup");
+		popup.classList.toggle("show");
+	}
+</script>
+
+
+<!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
+</head>
+
+
+
+
+<body>
+	<!-- banner -->
+		<!-- banner -->
+	<div class="logoInicio2">
+
+		<a href="./index.html"> <img class="logoInicio3"
+			src="images/logoinsta.png" alt="Inicio" border="5"></img>
+		</a> <br></br>
+
+
+	</div>
+<!-- EnDbanner -->
+
+
+	<div class="container gris" >
+
+		<!-- comienzo presupuestos -->
+
+		<div class="trescajas ">
+			<div class="presupuesto">
+				<h2 class="centrado">Recopilación de videos</h2>
+				<h4 class="centrado">
+					<span th:text="${precioBarato}+'€'"></span>
+				</h4>
+				<form action="/continuarRecopilacion" method="POST">
+					<input type="hidden" name="precioBarato" th:value="${precioBarato}"></input>
+					<input type="hidden" name="precioMedio" th:value="${precioMedio}"></input>
+					<input type="hidden" name="precioCaro" th:value="${precioCaro}"></input>
+					<input type='hidden' name='carpeta' th:value='${carpeta}' ></input>
+					<input type='hidden' name='ruta' th:value='${ruta}' ></input>
+					<input class="w3-buttonRecolipa" type="submit" name="subir"
+						value="Selecciona Recopilación"></input>
+				</form>
+
+			</div>
+			<div class="presupuesto">
+				<h2 class="centrado">Edición de video</h2>
+				<h4 class="centrado">
+					<span th:text="${precioMedio}+'€'"></span>
+				</h4>
+				<div class="listado ">
+					<ul>
+						<li>Edición elaborada de vídeo</li>
+						<li>Sugerencias personales</li>
+						<li>Una revisión/hacer un cambio</li>
+						<li>Posibilidad de incluir fotos</li>
+					</ul>
+				</div>
+				<form action="/continuarEdicion" method="POST">
+					<input type="hidden" name="precioBarato" th:value="${precioBarato}"></input>
+					<input type="hidden" name="precioMedio" th:value="${precioMedio}"></input>
+					<input type="hidden" name="precioCaro" th:value="${precioCaro}"></input>
+					<input type='hidden' name='carpeta' th:value='${carpeta}' ></input>
+					<input type='hidden' name='ruta' th:value='${ruta}' ></input>
+					<input class="w3-buttonEdita" type="submit" name="subir"
+						value="Selecciona Edición"></input>
+				</form>
+			</div>
+			<div class="presupuesto">
+				<h2 class="centrado">Edición premium</h2>
+				<h4 class="centrado">
+					<span th:text="${precioCaro}+'€'"></span>
+				</h4>
+				<div class="listado">
+					<ul>
+						<li>Edición elaborada y totalmente personalizada del vídeo</li>
+						<li>Sugerencias personales</li>
+						<li>Tres revisiones/hacer tres cambios</li>
+						<li>Posibilidad de incluir fotos</li>
+						<li>Contacto continuo con el editor</li>
+						<li>Posibilidad de añadir nuevos vídeos durante la edición</li>
+					</ul>
+				</div>
+				<form action="/continuarEdicionPremium" method="POST">
+					<input type="hidden" name="precioBarato" th:value="${precioBarato}"></input>
+					<input type="hidden" name="precioMedio" th:value="${precioMedio}"></input>
+					<input type="hidden" name="precioCaro" th:value="${precioCaro}"></input>
+					<input type='hidden' name='carpeta' th:value='${carpeta}' ></input>
+					<input type='hidden' name='ruta' th:value='${ruta}' ></input>
+					<input class="w3-buttonPremium" type="submit" name="subir"
+						value="Selecciona Edición Premium"></input>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- fin presupuestos -->
+
+
+
+	<!-- newsletter -->
+	 
+<div class="jarallax newsletter">
+		<div class="container">
+			<div class="w3l-heading newsletter-heading">
+				<h3>Comentarios</h3>
+			</div>
+		</div>
+		<br></br>
+		<div class="contact-form-top">
+			<h3>¿Qué más cosas tenías pensadas para tu vídeo?</h3>
+		</div>
+		<div class="agileinfo-contact-form-grid desktop">
+			<form action="/enviarCorreo" method="post">
+			<br></br>
+			<span class="blanco" th:text="'Precio Final: '+${precioMedio}+'€'"></span>
+			<br></br>
+				<input type="text" name="TextoInicial" placeholder="Texto Inicial del video"></input>
+				<input type="text" name="TextoFinal" placeholder="Texto Final del video"></input>
+				<textarea name="Cancion" placeholder="Canción para el video (No todas las canciones son óptimas, si prefieres que escojamos nosotros indica un estilo musical: Pop, Electrónica, Rock, Jazz, Reagge...)"></textarea>
+				<textarea name="Parte" placeholder="¿Qué parte de los videos es tu favorita? Cuéntanos"></textarea>
+				<textarea name="Persona" placeholder="¿Quieres dar más protagonismo a alguna persona en particular? "></textarea>
+				<textarea name="Historia" placeholder="Cuéntanos la historia del viaje para poder plasmarla lo mejor posible"></textarea>
+				
+				<input type='hidden' name='carpeta' th:value='${carpeta}' ></input>
+				<input type='hidden' name='precio' th:value="${precioMedio}" ></input>
+				<input type='hidden' name='ruta' th:value='${ruta}' ></input>
+				
+				<br></br>
+				<h4 font-family= "Beirut" class= "blanco">Rellena tus datos para poder ponernos en contacto contigo</h4>
+				<br></br>
+			    <input type="text" name="Nombre" placeholder="Nombre" required="true"></input>
+				<input type="email" name="Email" placeholder="Email" required="true"></input>
+				<input type="text" name="Telefono" placeholder="Teléfono" required="true"></input>
+				
+				
+				<br></br><br></br>
+				<button class="btn1">Enviar y subir vídeos</button>
+			</form>
+		</div>
+		<div class="agileinfo-contact-form-grid mobile" style="margin: 0;padding: 5%;">
+					<form action="/enviarCorreo" method="post">
+					<br></br>
+					<span class="blanco" th:text="'Precio Final: '+${precioMedio}+'€'"></span>
+					<br></br>
+						<input type="text" name="TextoInicial" placeholder="Texto Inicial del video"></input>
+						<input type="text" name="TextoFinal" placeholder="Texto Final del video"></input>
+						<textarea name="Cancion" placeholder="Canción para el video (No todas las canciones son óptimas, si prefieres que escojamos nosotros indica un estilo musical: Pop, Electrónica, Rock, Jazz, Reagge...)"></textarea>
+						<textarea name="Parte" placeholder="¿Qué parte de los videos es tu favorita? Cuéntanos"></textarea>
+						<textarea name="Persona" placeholder="¿Quieres dar más protagonismo a alguna persona en particular? "></textarea>
+						<textarea name="Historia" placeholder="Cuéntanos la historia del viaje para poder plasmarla lo mejor posible"></textarea>
+						
+						<input type='hidden' name='carpeta' th:value='${carpeta}' ></input>
+						<input type='hidden' name='precio' th:value="${precioMedio}" ></input>
+						<input type='hidden' name='ruta' th:value='${ruta}' ></input>
+						
+						<br></br>
+						<h4 font-family= "Beirut" class= "blanco">Rellena tus datos para poder ponernos en contacto contigo</h4>
+						<br></br>
+					    <input type="text" name="Nombre" placeholder="Nombre" required="true"></input>
+						<input type="email" name="Email" placeholder="Email" required="true"></input>
+						<input type="text" name="Telefono" placeholder="Teléfono" required="true"></input>
+						
+						
+						<br></br><br></br>
+						<button class="btn1">Enviar y subir vídeos</button>
+					</form>
+				</div>
+
+
+
+	</div>
+	
+	
+	<!-- copyright  -->
+	<div class="agileits-w3layouts-copyright">
+		<div class="container centrado">
+		<p>© 2017 Editory Web. All rights reserved</p>
+	</div>
+	</div>
+	<!-- //copyright -->
+
+</body>
+</html>

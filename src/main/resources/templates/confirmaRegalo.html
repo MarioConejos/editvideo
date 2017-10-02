@@ -1,0 +1,183 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Vídeo Recuerdo</title>
+<link rel="stylesheet" type="text/css" href="../static/css/style.css"
+	th:href="@{/css/style.css}"></link>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<script type="application/x-javascript">
+	
+
+	
+	
+	
+ addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
+
+
+
+
+
+</script>
+
+<!-- bootstrap-css -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css"
+	media="all"></link>
+<!--// bootstrap-css -->
+<!-- css -->
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all"></link>
+<!--// css -->
+<!-- font-awesome icons -->
+<link href="css/font-awesome.css" rel="stylesheet"></link>
+<!-- //font-awesome icons -->
+<!-- font -->
+<link
+	href="//fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i"
+	rel="stylesheet"></link>
+<link
+	href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+	rel="stylesheet"></link>
+<link
+	href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700italic,700,400italic,300italic,300'
+	rel='stylesheet' type='text/css'></link>
+<!-- //font -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event) {
+			event.preventDefault();
+			$('html,body').animate({
+				scrollTop : $(this.hash).offset().top
+			}, 1000);
+		});
+	});
+	// When the user clicks on div, open the popup
+	function popUpRecuerdo() {
+		var popup = document.getElementById("myPopup");
+		popup.classList.toggle("show");
+	}
+</script>
+
+
+<!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
+</head>
+
+
+
+
+<body>
+	<!-- banner -->
+
+
+	<div class="logoInicio2 desktop" style="margin-bottom: 5.5%;">
+
+		<a href="./index.html"> <img class="logoInicio3"
+			src="images/logoinsta.png" alt="Inicio" border="5"></img>
+		</a> <br></br>
+
+
+	</div>
+	<div class="logoInicio2 mobile" style="margin-bottom: 20%;">
+
+		<a href="./index.html"> <img class="logoInicio3"
+			src="images/logoinsta.png" alt="Inicio" border="5"></img>
+		</a> <br></br>
+
+
+	</div>
+
+
+
+
+
+	<!-- newsletter -->
+	<div class="jarallax newsletter">
+		<div class="container">
+			<div class="w3l-heading newsletter-heading">
+				<h3>Comentarios</h3>
+			</div>
+		</div>
+		<br></br>
+		<div class="contact-form-top">
+			<h3>¿Qué más cosas tenías pensadas para tu video regalo?</h3>
+		</div>
+		<div class="agileinfo-contact-form-grid desktop">
+			<form action="/enviarCorreoRegalo" method="post">
+				<input type ="hidden" name="Presupuesto" th:value="${precioTotal}"></input><span class="inputText"></span>
+				<input type="text" name="TextoInicial" placeholder="Texto Inicial del vídeo"></input>
+				<input type="text" name="TextoFinal" placeholder="Texto Final del vídeo"></input>
+				<input type="text" name="Cancion" placeholder="Canción para el video (No todas las canciones son óptimas, si prefieres que escojamos nosotros indica un estilo musical)"></input><br></br>
+			    <span font-family= "Verdana " class="blanco" th:text="'Precio Total: '+${precioTotal} +'€'"></span><br></br>
+			   <div class="blanco">
+					<h3 >Instrucciones</h3>
+					<ul>
+						<li>Confirma el pedido para que podamos asignar un editor </li>
+						<li>Envía todas las fotos y videos al número +34 679 066 204</li>
+						<li>Hasta que no confirmes que todos los videos y fotos están enviados no comenzará la edición.</li>
+						<li>Todos los archivos deben de estar enviados al menos 1 semana antes del día de entrega del regalo</li>
+						
+					</ul>
+					
+						
+						
+				</div>	
+				<br></br>
+				<h4 font-family= "Verdana" class= "blanco">Rellena tus datos para poder ponernos en contacto contigo</h4>
+				<br></br>
+			    <input type="text" name="Nombre" placeholder="Nombre" required="true"></input>
+				<input type="email" name="Email" placeholder="Email" required="true"></input>
+				<input type="text" name="Telefono" placeholder="Teléfono" required="true"></input>	
+				<button class="btn1">Enviar</button>
+			</form>
+			
+			
+			
+		</div>
+		
+		
+		
+		<div class="agileinfo-contact-form-grid mobile" style="margin: 0;padding: 5%;">
+			<form action="/enviarCorreoRegalo" method="post">
+				<input type ="hidden" name="Presupuesto" th:value="${precioTotal}"></input><span class="inputText"></span>
+				<input type="text" name="TextoInicial" placeholder="Texto Inicial del vídeo"></input>
+				<input type="text" name="TextoFinal" placeholder="Texto Final del vídeo"></input>
+				<input type="text" name="Cancion" placeholder="Canción para el video (No todas las canciones son óptimas, si prefieres que escojamos nosotros indica un estilo musical)"></input><br></br>
+			    <span font-family= "Verdana " class="blanco" th:text="'Precio Total: '+${precioTotal} +'€'"></span><br></br>
+			   <div class="blanco">
+					<h3 >Instrucciones</h3>
+					<ul>
+						<li>Confirma el pedido para que podamos asignar un editor </li>
+						<li>Envía todas las fotos y videos al número +34 679 066 204</li>
+						<li>Hasta que no confirmes que todos los videos y fotos están enviados no comenzará la edición.</li>
+						<li>Todos los archivos deben de estar enviados al menos 1 semana antes del día de entrega del regalo</li>
+						
+					</ul>
+					
+						
+						
+				</div>	
+				<br></br>
+				<h4 font-family= "Verdana" class= "blanco">Rellena tus datos para poder ponernos en contacto contigo</h4>
+				<br></br>
+			    <input type="text" name="Nombre" placeholder="Nombre" required="true"></input>
+				<input type="email" name="Email" placeholder="Email" required="true"></input>
+				<input type="text" name="Telefono" placeholder="Teléfono" required="true"></input>	
+				<button class="btn1">Enviar</button>
+			</form>
+			
+			
+			
+		</div>
+
+	</div>
+			<!-- copyright -->
+	<div class="agileits-w3layouts-copyright">
+		<div class="container centrado">
+		<p>© 2017 Editory Web. All rights reserved</p>
+	</div>
+	</div>
+	<!-- //copyright -->
+
+</body>
+</html>

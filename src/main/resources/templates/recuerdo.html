@@ -1,0 +1,163 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Editory</title>
+<link rel="stylesheet" type="text/css" href="../static/css/style.css"
+	th:href="@{/css/style.css}"></link>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script type="application/x-javascript">
+	
+	
+	
+	
+	
+ addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
+
+
+
+
+
+</script>
+
+
+ 
+
+<!-- bootstrap-css -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css"
+	media="all"></link>
+<!--// bootstrap-css -->
+<!-- css -->
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all"></link>
+<!--// css -->
+<!-- font-awesome icons -->
+<link href="css/font-awesome.css" rel="stylesheet"></link>
+<!-- //font-awesome icons -->
+<!-- font -->
+<link
+	href="//fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i"
+	rel="stylesheet"></link>
+<link
+	href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+	rel="stylesheet"></link>
+<link
+	href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700italic,700,400italic,300italic,300'
+	rel='stylesheet' type='text/css'></link>
+<!-- //font -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/funciones.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event) {
+			event.preventDefault();
+			$('html,body').animate({
+				scrollTop : $(this.hash).offset().top
+			}, 1000);
+		});
+	});
+</script>
+
+
+
+
+<!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
+</head>
+<body>
+
+
+	<div class="logoInicio2">
+
+		<a href="./index.html"> <img class="logoInicio3"
+			src="images/logoinsta.png" alt="Inicio" border="5"></img>
+		</a> <br></br>
+
+
+	</div>
+	<br></br>
+	<br></br>
+	
+	
+	
+	<div class="trescajas2" id="colorfondo1">
+
+		<form action="/subirArchivos" method="POST"
+			enctype="multipart/form-data">
+			
+			<!--  
+			<h5 class="bajarPading">Selecciona o arrastra tus videos aquí (en cualquier caso, todos a la vez)</h5>
+			<input class="botonSubidaArchivos button4" type="file" id="files"
+				name="files" accept="media_type" multiple="true"></input>
+			<div id="filelist"></div>
+			
+			-->
+			
+			<h5 style="margin-top: 5%;padding-top: 5%;padding-bottom: 3%;">¿Qué duración aproximada tienen <b>todos</b> tus videos en total?</h5>
+			<input class="justificado" type="radio" name="duracion" value="75"
+				checked="true"> Menos de 15 minutos<br></br> </input> 
+				
+			<input
+				class="justificado" type="radio" name="duracion" value="100"
+				checked="false"> Entre 15-30 minutos<br></br> </input> 
+				
+			<input
+				class="justificado" type="radio" name="duracion" value="200"
+				checked="false"> Más de 30 minutos<br></br> </input>
+
+			<div class="w3l-button centrarBotonEnviar" style="padding-bottom: 5%;padding-top: 3%;" >
+
+				<input type="submit" name="subir" value="Calcular presupuesto" id="boton"></input>
+				
+				<!-- 
+				<div class="popuptext hidden" id="myPopup">
+					Cuando tus vídeos se hayan subido serás redirigido. Por favor,
+					espera... (Este proceso puede llevar varios minutos según el tamaño de tus videos, no cierres esta pestaña)
+					<br></br>
+					<img src="http://www.feecha.com/assets/loading.gif" style="width: 15%;"></img>
+			
+				</div>
+				 -->
+			</div>
+
+
+		</form>
+		<!-- 
+		<script>
+			function popUpRecuerdo() {
+				var popup = document.getElementById("myPopup");
+				var boton = document.getElementById("boton");
+				popup.classList.toggle("hidden");
+				popup.classList.toggle("show");
+				boton.classList.toggle("hidden");
+			}
+
+			document.getElementById('files').addEventListener('change',
+					function(e) {
+						var list = document.getElementById('filelist');
+					});
+		</script>
+		 -->
+	</div>
+
+
+
+	<!-- fin subida archivos -->
+	<div class="jarallax barra">
+		<div class="container" style="padding: 9%;">
+			<br></br> <br></br> <br></br> <br></br> <br></br> <br></br>
+
+		</div>
+
+	</div>
+
+
+	<!-- copyright -->
+	<div class="agileits-w3layouts-copyright">
+		<div class="container centrado">
+			<p>© 2017 Editory Web. All rights reserved</p>
+		</div>
+	</div>
+	<!-- //copyright -->
+
+</body>
+</html>
